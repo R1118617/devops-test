@@ -1,12 +1,10 @@
-name: My first workflow
+name: Display hostname
 
-on push:
-  push:
-    branches: main
+on: push
 
 jobs:
-  hostname:
+  display-hostname:
     runs-on: ubuntu-latest
-     steps:
+    steps:
       - name: Run hostname command
         run: hostname
