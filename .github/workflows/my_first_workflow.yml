@@ -1,0 +1,12 @@
+name: My first workflow
+
+on push:
+  push:
+    branches: main
+
+jobs:
+  hostname:
+    runs-on: ubuntu-latest
+     steps:
+      - name: Run hostname command
+        run: hostname
