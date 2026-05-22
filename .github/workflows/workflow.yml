@@ -1,5 +1,4 @@
 name: Pipeline
-ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true
 
 on:
   push:
@@ -8,6 +7,8 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
+    env:
+      ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION: true  # Allow Node 16 usage
     steps:
       - name: Checkout repository code into runner
         uses: actions/checkout@v2
